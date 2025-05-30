@@ -29,6 +29,7 @@ saveData <- function(data) {
   sheet_append("1jtkLqJYiw854yOmj6kONkonSqolfSjl2fS0wdzJmjUU", data)
 }
 
+googlesheets4::gs4_auth(cache = ".secrets", email = "aureollerocher@gmail.com")
 
 
 #saveData(df)

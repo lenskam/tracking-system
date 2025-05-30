@@ -7,13 +7,12 @@ server <- function(input,output,session){
  # Update the facilities list based on the region
   
   observe({
-    
     choices_fosa <- hf_data %>% 
                 filter(Region ==  input$ticket_location) %>% 
                 pull(`Health facility`) %>% 
                 unique()
     
-    updateSelectInput(session,"ticket_facility", choices = choices_fosa )
+    updateSelectInput(session,"ticket_facility", choices = choices_fosa)
     
 })
   

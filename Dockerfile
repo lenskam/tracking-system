@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
 
 ENV R_LIBS_SITE=/usr/local/lib/R/site-library
 
+RUN apt-get update && apt-get install -y libsodium-dev
 RUN R -e "install.packages('pacman', repos='http://cran.rstudio.com/')" \
     && R -e "pacman::p_load(shiny,shinyjs,htmltools,lubridate,mailR,sodium,googlesheets4,bslib,waiter,shinyalert,here,rio,shinycustomloader,dplyr,DT)"
 
